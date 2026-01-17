@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".ui.permohonan.PermohonanActivity">
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Back"
+            android:onClick="onBack"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsextrabold"
+            android:text="Form Permohonan Informasi"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_top_rounded_corners"
+            android:orientation="vertical">
+
+            <!-- ScrollView hanya untuk bagian dalam form -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/input_permohonan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="28dp">
+
+                    <!-- ==================== DATA PEMOHON ==================== -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/poppinsextrabold"
+                        android:text="Data Pemohon"
+                        android:textColor="@color/primary"
+                        android:textSize="16sp" />
+
+                    <!-- Jenis Pemohon -->
+                    <TextView
+                        style="@style/LabelForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Jenis Pemohon" />
+
+                    <Spinner
+                        android:id="@+id/spinner_jenis_pemohon"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/bg_edittext"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp" />
+
+                    <!-- Nama Pemohon -->
+                    <TextView
+                        style="@style/LabelForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Nama Pemohon" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/MyCustomTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:hint="Masukkan Nama Lengkap">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_nama_pemohon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Nomor Identitas -->
+                    <TextView
+                        style="@style/LabelForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Nomor Identitas" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/MyCustomTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:hint="NIK / SK Pengesahan">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_nomor_identitas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Alamat -->
+                    <TextView
+                        style="@style/LabelForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Alamat" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/MyCustomTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:hint="Alamat Lengkap">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_alamat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Pekerjaan -->
+                    <TextView
+                        style="@style/LabelForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Pekerjaan" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/MyCustomTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:hint="Masukkan Pekerjaan">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_pekerjaan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- No HP -->
+                    <TextView
+                        style="@style/LabelForm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="No HP" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/MyCustomTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:hint="08123456789">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_no_hp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- ==================== ISI FORMULIR PERMOHONAN ==================== -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/poppinsextrabold"
+                        android:text="Isi Formulir Permohonan"
+                        android:textColor="@color/primary"
+                        android:textSize="16sp" />
+
+                    <!-- Tanggal Permohonan -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="Tanggal Permohonan"
+                            android:textColor="@color/primary"
+                            android:textSize="12sp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/MyCustomTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:hint="Pilih Tanggal"
+                            app:endIconMode="custom"
+                            app:endIconDrawable="@drawable/ic_calendar">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edit_tanggal_permohonan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:clickable="true"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <!-- Tujuan Permohonan Informasi -->
+                    <LinearLayout
+                        android:id="@+id/input_tujuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="Tujuan Permohonan Informasi"
+                            android:textColor="@color/primary"
+                            android:textSize="12sp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/MyCustomTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:hint="Masukkan Tujuan">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edit_inputpermohonan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <!-- Rincian Informasi -->
+                    <LinearLayout
+                        android:id="@+id/input_permohonan1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="Rincian Informasi"
+                            android:textColor="@color/primary"
+                            android:textSize="12sp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/MyCustomTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:hint="Masukkan Rincian Informasi">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edit_inputdeskripsi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textMultiLine"
+                                android:lines="4"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <!-- Cara Memperoleh Informasi -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/LabelForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cara Memperoleh Informasi" />
+
+                        <RadioGroup
+                            android:id="@+id/radio_group_cara_dapat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/radio_melihat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsreguler"
+                                android:text="Melihat / Membaca / Mendengarkan"
+                                android:textColor="@color/primary"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_dapat_salinan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsreguler"
+                                android:text="Mendapatkan Salinan Informasi"
+                                android:textColor="@color/primary"
+                                android:textSize="12sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <!-- Mendapatkan Salinan Informasi -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/LabelForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mendapatkan Salinan Informasi" />
+
+                        <RadioGroup
+                            android:id="@+id/radio_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/radio_ambil_langsung"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsreguler"
+                                android:text="Mengambil Langsung"
+                                android:textColor="@color/primary"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_kurir"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsreguler"
+                                android:text="Kurir"
+                                android:textColor="@color/primary"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_pos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsreguler"
+                                android:text="POS"
+                                android:textColor="@color/primary"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsreguler"
+                                android:text="Email"
+                                android:textColor="@color/primary"
+                                android:textSize="12sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <!-- Cara Memperoleh Salinan Informasi -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/LabelForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cara Memperoleh Salinan Informasi" />
+
+                        <RadioGroup
+                            android:id="@+id/radio_group_salinan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/radio_hardcopy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsreguler"
+                                android:text="Hardcopy"
+                                android:textColor="@color/primary"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_softcopy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsreguler"
+                                android:text="Softcopy"
+                                android:textColor="@color/primary"
+                                android:textSize="12sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <!-- File Pendukung -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/LabelForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="File Pendukung" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btn_pilih_file"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/primary"
+                                android:text="Pilih File"
+                                android:textSize="12sp"
+                                app:cornerRadius="8dp" />
+
+                            <TextView
+                                android:id="@+id/txt_nama_file"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppinsreguler"
+                                android:gravity="center_vertical"
+                                android:hint="Belum ada file dipilih"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsreguler"
+                            android:text="Format: PDF, JPG, PNG (maks 2MB)"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <!-- Buttons -->
+                    <LinearLayout
+                        android:id="@+id/container_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="32dp"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_batal"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:text="Batal"
+                            android:textColor="@color/primary"
+                            app:cornerRadius="32dp"
+                            app:strokeColor="@color/primary"
+                            app:strokeWidth="1dp"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/submit_button"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="Kirim"
+                            android:backgroundTint="@color/primary"
+                            app:cornerRadius="32dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

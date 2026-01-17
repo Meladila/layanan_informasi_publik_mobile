@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- View untuk border kiri -->
+        <View
+            android:id="@+id/view_border"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="-16dp"
+            tools:background="@color/success"/>
+
+        <TextView
+            android:id="@+id/tv_judul_riwayat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            tools:text="Keberatan Selesai"/>
+
+        <TextView
+            android:id="@+id/tv_isi_riwayat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            tools:text="Tanggapan: Keberatan Anda disetujui. Keputusan: Dikabulkan."/>
+
+        <TextView
+            android:id="@+id/tv_file_balasan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unduh File Balasan"
+            android:textColor="@color/primary"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_penanggap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textSize="12sp"
+            android:textColor="@color/gray"
+            android:layout_marginTop="8dp"
+            tools:text="Ditanggapi oleh: Admin (Selesai) - 05 Des 2024 10:00"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

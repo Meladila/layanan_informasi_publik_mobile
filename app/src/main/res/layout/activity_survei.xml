@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".ui.survei.SurveiActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp">
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Back"
+                android:layout_gravity="start"
+                android:layout_marginEnd="16dp"
+                android:onClick="onBack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsextrabold"
+                android:text="Form Survei"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Main Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_white_background1"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:id="@+id/input_survei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp">
+
+                <!-- ==================== INDIKATOR SURVEI ==================== -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Silakan isi survei berikut untuk memberikan penilaian terhadap layanan informasi publik"
+                    android:fontFamily="@font/poppinsreguler"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Persyaratan Pelayanan -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Persyaratan pelayanan"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary" />
+
+                    <Spinner
+                        android:id="@+id/spinner_persyaratan"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/bg_edittext"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"/>
+                </LinearLayout>
+
+                <!-- Prosedur Pelayanan -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Prosedur pelayanan"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary" />
+
+                    <Spinner
+                        android:id="@+id/spinner_prosedur"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/bg_edittext"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"/>
+                </LinearLayout>
+
+                <!-- Waktu Layanan -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Waktu layanan"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary" />
+
+                    <Spinner
+                        android:id="@+id/spinner_waktu_layanan"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/bg_edittext"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"/>
+                </LinearLayout>
+
+                <!-- Kompetensi Petugas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kompetensi petugas"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary" />
+
+                    <Spinner
+                        android:id="@+id/spinner_kompetensi_petugas"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/bg_edittext"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"/>
+                </LinearLayout>
+
+                <!-- Perilaku Petugas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Perilaku petugas"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary" />
+
+                    <Spinner
+                        android:id="@+id/spinner_perilaku_petugas"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/bg_edittext"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"/>
+                </LinearLayout>
+
+                <!-- Penanganan Pengaduan -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Penanganan pengaduan"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary" />
+
+                    <Spinner
+                        android:id="@+id/spinner_penanganan_pengaduan"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/bg_edittext"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"/>
+                </LinearLayout>
+
+                <!-- Sarana dan Prasarana -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sarana dan prasarana"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary" />
+
+                    <Spinner
+                        android:id="@+id/spinner_sarana_prasarana"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/bg_edittext"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"/>
+                </LinearLayout>
+
+                <!-- Kepuasan Secara Umum -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kepuasan secara umum"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary" />
+
+                    <Spinner
+                        android:id="@+id/spinner_kepuasan_umum"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/bg_edittext"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"/>
+                </LinearLayout>
+
+                <!-- Saran dan Masukan -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Saran dan Masukan"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_saran"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:hint="Tulis saran Anda di sini..."
+                            android:background="@drawable/bg_edittext"
+                            android:paddingLeft="20sp"
+                            android:fontFamily="@font/poppinsreguler"
+                            android:textSize="12dp"
+                            android:inputType="textMultiLine"
+                            android:lines="4" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:id="@+id/container_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="150dp"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_batal"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Batal"
+                    android:textColor="@color/primary"
+                    app:cornerRadius="32dp"
+                    app:strokeColor="@color/primary"
+                    app:strokeWidth="1dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_kirim"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="Kirim Survei"
+                    android:backgroundTint="@color/primary"
+                    app:cornerRadius="32dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

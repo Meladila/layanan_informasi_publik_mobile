@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".ui.keberatan.KeberatanActivity">
+
+    <!-- Header (TIDAK AKAN DISCROLL) -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Back"
+            android:onClick="onBack"
+            android:src="@drawable/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsextrabold"
+            android:text="Form Keberatan Informasi"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Kontainer Form (YANG AKAN DISCROLL) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_top_rounded_corners"
+            android:orientation="vertical">
+
+            <!-- ScrollView hanya untuk bagian dalam form -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/input_keberatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="28dp">
+
+                    <!-- ==================== DATA PEMOHON ==================== -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/poppinsextrabold"
+                        android:text="Data Pemohon"
+                        android:textColor="@color/primary"
+                        android:textSize="16sp" />
+
+                    <!-- Nama Pemohon -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/LabelForm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Nama Pemohon" />
+
+                        <TextView
+                            android:id="@+id/tv_nama_pemohon"
+                            style="@style/ValueForm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            tools:text="John Doe" />
+                    </LinearLayout>
+
+                    <!-- Alamat -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/LabelForm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Alamat" />
+
+                        <TextView
+                            android:id="@+id/tv_alamat_pemohon"
+                            style="@style/ValueForm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            tools:text="Jl. Contoh No. 123, Jakarta" />
+                    </LinearLayout>
+
+                    <!-- Pekerjaan -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/LabelForm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Pekerjaan" />
+
+                        <TextView
+                            android:id="@+id/tv_pekerjaan_pemohon"
+                            style="@style/ValueForm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            tools:text="Swasta" />
+                    </LinearLayout>
+
+                    <!-- No HP -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/LabelForm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="No HP" />
+
+                        <TextView
+                            android:id="@+id/tv_no_hp_pemohon"
+                            style="@style/ValueForm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            tools:text="08123456789" />
+                    </LinearLayout>
+
+                    <!-- ==================== ISI FORMULIR KEBERATAN ==================== -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/poppinsextrabold"
+                        android:text="Isi Formulir Keberatan"
+                        android:textColor="@color/primary"
+                        android:textSize="16sp" />
+
+                    <!-- Tanggal Keberatan -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/LabelForm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="Tanggal Keberatan" />
+
+                        <TextView
+                            android:id="@+id/tv_tanggal_keberatan"
+                            style="@style/ValueForm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            tools:text="2023-11-20" />
+                    </LinearLayout>
+
+                    <!-- ID Permohonan -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/LabelForm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:text="ID Permohonan" />
+
+                        <TextView
+                            android:id="@+id/tv_id_permohonan"
+                            style="@style/ValueForm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            tools:text="001/PPID/SMKN2BSK/2023" />
+                    </LinearLayout>
+
+                    <!-- Alasan Keberatan -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/LabelForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Alasan Keberatan" />
+
+                        <Spinner
+                            android:id="@+id/spinner_alasan_keberatan"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="9dp"
+                            android:background="@drawable/bg_edittext"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp" />
+                    </LinearLayout>
+
+                    <!-- Tujuan Penggunaan Informasi -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/LabelForm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tujuan Penggunaan Informasi" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/MyCustomTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:hint="Masukkan tujuan penggunaan informasi">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edit_tujuan_penggunaan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textMultiLine"
+                                android:lines="4"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <!-- Buttons -->
+                    <LinearLayout
+                        android:id="@+id/container_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="32dp"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_batal"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:text="Batal"
+                            android:textColor="@color/primary"
+                            app:cornerRadius="32dp"
+                            app:strokeColor="@color/primary"
+                            app:strokeWidth="1dp"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_simpan"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="Simpan"
+                            android:backgroundTint="@color/primary"
+                            app:cornerRadius="32dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

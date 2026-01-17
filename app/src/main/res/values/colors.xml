@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#0b6339</color>
+    <color name="primary_10">#1A2196F3</color>
+    <color name="gray">#ABABAB</color>
+    <color name="paragraf">#949494</color>
+    <color name="dongker">#245BCA</color>
+    <color name="home">#4CAF50</color>
+    <color name="riwayat">#C9379D</color>
+    <color name="daftarinformasi">#E6A919</color>
+    <color name="kontak">#1194AA</color>
+    <color name="logout">#F44336</color>
+    <color name="success_light">#4CAF50	</color>
+
+    <color name="success_background">#E8F5E9</color>
+    <color name="success_text">#FAFAFA</color>
+    <color name="danger_background">#FFEBEE</color>
+    <color name="danger_text">#D32F2F</color>
+    <color name="warning_background">#FDDB13</color>
+    <color name="warning_text">#F57F17</color>
+    <color name="info_background">#E3F2FD</color>
+    <color name="info_text">#1976D2</color>
+</resources>

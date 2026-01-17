@@ -1,0 +1,167 @@
+<resources>
+    <!-- ==================== APLIKASI UMUM ==================== -->
+    <string name="app_name">ta_ppid</string>
+
+    <!-- ==================== AUTENTIKASI (LOGIN & REGISTER) ==================== -->
+    <string name="sign_in">Masuk</string>
+    <string name="sign_up">Daftar</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="login_to_continue">Masuk untuk melanjutkan</string>
+    <string name="register_to_continue">Daftar untuk melanjutkan</string>
+    <string name="create_account">Buat Akun</string>
+    <string name="have_account">Sudah punya akun? Masuk</string>
+    <string name="sign_up_prompt">Belum punya akun? Daftar Sekarang</string>
+    <string name="hint_password_confirmation">Konfirmasi Password</string>
+
+
+    <!-- Input Fields -->
+    <string name="hint_full_name">Nama Lengkap</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="forgot_password">Lupa password?</string>
+
+    <!-- Buttons -->
+    <string name="login">Masuk</string>
+    <string name="btn_register">Daftar</string>
+
+    <!-- Content Descriptions (Aksesibilitas) -->
+    <string name="back_button_desc">Tombol Kembali</string>
+    <string name="illustration_desc">Ilustrasi Login</string>
+    <string name="profile_picture_desc">Foto Profil</string>
+    <string name="notification_icon_desc">Ikon Notifikasi</string>
+    <string name="search_icon_desc">Ikon Cari</string>
+    <string name="filter_icon_desc">Ikon Filter</string>
+    <string name="download_button_desc">Tombol Unduh File</string>
+    <string name="author_icon_desc">Ikon Penulis</string>
+    <string name="calendar_icon_desc">Ikon Kalender</string>
+
+    <!-- ==================== HOME ==================== -->
+    <string name="welcome_user">Hai, Melani Adila Putri</string>
+    <string name="welcome_message">Selamat datang di PPID SMKN 2 Batusangkar</string>
+    <string name="search_hint">Cari informasi publik...</string>
+    <string name="services">Layanan</string>
+    <string name="news">Berita</string>
+    <string name="galeri">Galeri</string>
+    <string name="see_all">Lihat Semua</string>
+
+    <!-- ==================== DAFTAR INFORMASI ==================== -->
+    <string name="daftar_informasi_publik">Daftar Informasi Publik</string>
+
+    <!-- ==================== ITEM PLACEHOLDER (UNTUK DESIGN) ==================== -->
+    <!-- Ini adalah teks contoh yang akan diganti dengan data dinamis -->
+    <string name="news_title_placeholder">Judul Berita Terbaru</string>
+    <string name="news_author_placeholder">Admin</string>
+    <string name="news_date_placeholder">30 Oktober 2025</string>
+
+    <string name="service_title_placeholder">Judul Layanan</string>
+
+    <string name="info_title_placeholder">Laporan Tahunan PPID 2024</string>
+    <string name="info_author_placeholder">Admin</string>
+    <string name="info_date_placeholder">30 Oktober 2025</string>
+
+    <string name="aktivitas">Aktivitas</string>
+
+    <string name="riwayat_layanan_placeholder">Permohonan</string>
+    <string name="riwayat_status_placeholder">Menunggu</string>
+    <string name="riwayat_tanggal_placeholder">05/12/2024</string>
+    <string name="riwayat_tujuan_placeholder">Tujuan Informasi</string>
+    <string name="riwayat_deskripsi_placeholder">Rincian Informasi</string>
+    <string name="riwayat_detail_button">Detail</string>
+    <string name="riwayat_logo_desc">Logo Riwayat</string>
+
+    <!-- Tambahkan ini -->
+    <string name="kontak_title">Informasi Kontak</string>
+    <string name="kontak_alamat">Alamat: GEDUNG SAPTA PESONA, Jl. Medan Merdeka Barat No.17, Jakarta</string>
+    <string name="kontak_email">Email: info@kemenparekraf.go.id</string>
+    <string name="kontak_website">Website: https://kemenparekraf.go.id</string>
+    <string name="kontak_media_sosial">Media Sosial:</string>
+    <string name="kontak_media_sosial_link">Facebook: Kementerian Pariwisata dan Ekonomi Kreatif</string>
+
+    <!-- ==================== PERMINTAAN INFORMASI ==================== -->
+    <string name="permohonan_title">Form Permohonan Informasi</string>
+    <string name="permohonan_subtitle">Silakan lengkapi formulir di bawah ini untuk mengajukan permohonan informasi.</string>
+    <string name="kirim_permohonan">Kirim Permohonan</string>
+
+    <!-- Data Pemohon -->
+    <string name="data_pemohon_title">Data Pemohon</string>
+    <string name="jenis_pemohon_hint">Pilih Jenis Pemohon</string>
+    <string name="nama_pemohon_hint">Nama Lengkap / Nama Badan / Nama Kelompok</string>
+    <string name="no_identitas_hint">NIK / SK Pengesahan / Nomor Surat Kuasa</string>
+    <string name="alamat_hint">Tulis alamat lengkap</string>
+    <string name="pekerjaan_hint">Isi jika perorangan</string>
+    <string name="no_hp_hint">0812xxxx</string>
+
+    <!-- Isi Formulir -->
+    <string name="data_permohonan">Data Permohonan</string>
+    <string name="tujuan_hint">Tujuan Informasi</string>
+    <string name="rincian_hint">Rincian Informasi yang Anda butuhkan</string>
+
+    <!-- Mendapatkan Salinan Informasi -->
+    <string name="salinan_informasi_title">Mendapatkan Salinan Informasi</string>
+    <string name="cara_peroleh_title">Cara Memperoleh Informasi</string>
+
+    <!-- Pilihan untuk Spinner -->
+    <string name="jenis_pemohon_perorangan">Perorangan</string>
+    <string name="jenis_pemohon_badan_hukum">Badan Hukum</string>
+    <string name="jenis_pemohon_kelompok">Kelompok</string>
+
+    <string name="cara_peroleh_melihat">1. Melihat / Membaca / Mendengarkan</string>
+    <string name="cara_peroleh_mendapatkan">2. Mendapatkan Salinan Informasi</string>
+
+    <string name="salinan_informasi_langsung">Langsung</string>
+    <string name="salinan_informasi_kurir">Kurir</string>
+    <string name="salinan_informasi_pos">POS</string>
+    <string name="salinan_informasi_email">Email</string>
+
+    <!-- File Picker -->
+    <string name="pilih_file_hint">Pilih file...</string>
+    <string name="file_picker_error">Tidak ada file yang dipilih.</string>
+    <string name="file_picker_success">File dipilih: %s</string>
+
+    <!-- Pesan Validasi dan Toast -->
+    <string name="error_field_required">Field ini tidak boleh kosong.</string>
+    <string name="error_email_invalid">Format email tidak valid.</string>
+    <string name="error_phone_invalid">Nomor HP tidak valid.</string>
+    <string name="form_submit_success">Permohonan Anda sedang diproses...</string>
+    <string name="form_submit_error">Gagal mengirim permohonan. Silakan coba lagi.</string>
+
+    <!-- Data Preview (untuk debugging atau preview) -->
+    <string name="preview_data_pemohon"></string>
+    <string name="preview_jenis_pemohon">Jenis Pemohon: %s</string>
+    <string name="preview_nama_pemohon">Nama: %s</string>
+    <string name="preview_no_identitas">No. Identitas: %s</string>
+    <string name="preview_alamat">Alamat: %s</string>
+    <string name="preview_pekerjaan">Pekerjaan: %s</string>
+    <string name="preview_no_hp">No. HP: %s</string>
+    <string name="preview_tujuan">Tujuan: %s</string>
+    <string name="preview_rincian">Rincian: %s</string>
+    <string name="preview_cara_peroleh">Cara Peroleh: %s</string>
+    <string name="preview_salinan_informasi">Salinan: %s</string>
+    <string name="preview_file">File: %s</string>
+    <string name="pilih">Pilih File</string>
+
+    <string-array name="alasan_keberatan_array">
+        <item>-- Pilih Alasan Keberatan --</item>
+        <item>a. Permohonan Informasi ditolak</item>
+        <item>b. Informasi berkala tidak disediakan</item>
+        <item>c. Permintaan informasi tidak ditanggapi</item>
+        <item>d. Permintaan informasi ditanggapi tidak sebagaimana yang diminta</item>
+        <item>e. Permintaan informasi tidak dipenuhi</item>
+        <item>f. Biaya yang dikenakan tidak wajar</item>
+        <item>g. Informasi disampaikan melebihi jangka waktu yang ditentukan</item>
+    </string-array>
+
+    <string-array name="rating_options">
+        <item>-- Pilih Skor --</item>
+        <item>1 - Sangat Tidak Puas</item>
+        <item>2 - Tidak Puas</item>
+        <item>3 - Cukup</item>
+        <item>4 - Puas</item>
+        <item>5 - Sangat Puas</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Sabar ya</string>
+
+
+</resources>

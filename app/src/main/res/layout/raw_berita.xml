@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+<LinearLayout
+android:layout_width="340dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+<ImageView
+android:id="@+id/iv_berita_image"
+android:layout_width="match_parent"
+android:layout_height="120dp"
+android:contentDescription="@string/news_title_placeholder"
+android:scaleType="centerCrop"
+tools:src="@drawable/ic_news_image1" />
+
+<TextView
+android:id="@+id/tv_berita_title"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="8dp"
+android:ellipsize="end"
+android:maxLines="2"
+android:textColor="@color/black"
+android:textSize="16sp"
+android:textStyle="bold"
+tools:text="@string/news_title_placeholder" />
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="8dp"
+android:orientation="horizontal">
+
+<!-- Author Section -->
+<ImageView
+    android:id="@+id/iconAuthor"
+    android:layout_width="14dp"
+    android:layout_height="14dp"
+    android:layout_gravity="center_vertical"
+    android:contentDescription="@string/author_icon_desc"
+    android:src="@drawable/ic_person" />
+
+<TextView
+    android:id="@+id/tv_berita_author"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_weight="1"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:textColor="@color/gray"
+    android:textSize="12sp"
+    tools:text="@string/news_author_placeholder" />
+
+<!-- Separator -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:text="•"
+    android:textColor="@color/black"
+    android:textSize="12sp" />
+
+<!-- Date Section -->
+<ImageView
+    android:id="@+id/iconCalendar"
+    android:layout_width="14dp"
+    android:layout_height="14dp"
+    android:layout_gravity="center_vertical"
+    android:layout_marginStart="8dp"
+    android:contentDescription="@string/calendar_icon_desc"
+    android:src="@drawable/ic_calendar" />
+
+<TextView
+    android:id="@+id/tv_berita_date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_gravity="center_vertical"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:textColor="@color/gray"
+    android:textSize="12sp"
+    tools:text="@string/news_date_placeholder" />
+
+</LinearLayout>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.ta_ppid.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+    <fragment
+        android:id="@+id/daftarinformasiFragment"
+        android:name="com.example.ta_ppid.ui.daftarinformasi.DaftarInformasiFragment"
+        android:label="fragment_daftarinformasi"
+        tools:layout="@layout/fragment_daftarinformasi" />
+    <fragment
+        android:id="@+id/aktivitasFragment"
+        android:name="com.example.ta_ppid.ui.aktivitas.AktivitasFragment"
+        android:label="fragment_aktivitas"
+        tools:layout="@layout/fragment_aktivitas" />
+    <fragment
+        android:id="@+id/kontakFragment"
+        android:name="com.example.ta_ppid.ui.kontak.KontakFragment"
+        android:label="fragment_kontak"
+        tools:layout="@layout/fragment_kontak" />
+    <!-- Tambahkan Fragment Berita -->
+    <fragment
+        android:id="@+id/navigation_berita"
+        android:name="com.example.ta_ppid.ui.berita.BeritaFragment"
+        android:label="Berita"
+        tools:layout="@layout/fragment_berita" />
+
+    <!-- Tambahkan Fragment Detail Berita -->
+    <fragment
+        android:id="@+id/navigation_detail_berita"
+        android:name="com.example.ta_ppid.ui.berita.DetailBeritaFragment"
+        android:label="Detail Berita"
+        tools:layout="@layout/fragment_detail_berita">
+
+        <!-- Tambahkan argumen untuk mengirim ID berita -->
+        <argument
+            android:name="beritaId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/galeriFragment"
+        android:name="com.example.ta_ppid.ui.galeri.GaleriFragment"
+        android:label="fragment_galeri"
+        tools:layout="@layout/fragment_galeri" />
+
+    <!-- Dari Home ke Berita -->
+    <action
+        android:id="@+id/action_navigation_home_to_navigation_berita"
+        app:destination="@id/navigation_berita" />
+
+    <!-- Dari Berita ke Detail Berita -->
+    <action
+        android:id="@+id/action_navigation_berita_to_navigation_detail_berita"
+        app:destination="@id/navigation_detail_berita" />
+</navigation>
